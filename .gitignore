@@ -1,3 +1,7 @@
+# track data folder but not its content
+gamelan_music_dataset/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
