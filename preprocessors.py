@@ -13,11 +13,10 @@ class Preprocessor(object):
 
     def apply_median_filtering(self, spectrogram):
         """
-        Divides harmonic from percussive components.
+        Divides harmonic from percussive components and it applies wiener soft masking.
         Returns harmonic.
 
         - you might want to have a look at this (https://librosa.org/librosa_gallery/auto_examples/plot_hprss.html)
-        - note that librosa is already applying wiener masking
         - consider tweaking margin and kernel parameters of _librosa.decompose.hpss()_
         """
         D_harmonic, D_percussive = librosa.decompose.hpss(spectrogram)
