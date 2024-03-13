@@ -20,7 +20,7 @@ class Preprocessor(object):
         - consider tweaking margin and kernel parameters of _librosa.decompose.hpss()_
         """
         D_harmonic, D_percussive = librosa.decompose.hpss(spectrogram)
-        return D_harmonic
+        return D_harmonic, D_percussive
 
     def apply_NMF(self, spectrogram):
         """
