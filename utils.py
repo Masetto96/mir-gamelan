@@ -29,8 +29,14 @@ def select_stable_part(segment, threshold=0.1):
     Returns:
         stable_part (ndarray): The most stable part of the segment.
     """
-    # TODO: maybe turns hz into cents before computing stable regions
-    std_dev = np.std(segment)
+    # # Calculate relative differences between consecutive frequencies
+    # relative_diffs = np.diff(segment)
+    
+    # # Convert relative differences to cents
+    # cents = 1200 * np.log2(1 + relative_diffs / segment[:-1])
+    std_dev = np.nanstd(segment)
+
+    print(std_dev)
     if std_dev < threshold:
         return segment
     else:
