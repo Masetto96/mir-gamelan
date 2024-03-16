@@ -1,10 +1,36 @@
+# Computational Analysis of Gamelan Gong Kebyar Tuning for Geographic Classification
 
-## Introduction and scope
-Despite being an essential part of the cultural heritage of one of the most populated countries in the world, the Gamelan tradition remains unexplored from a computational musicological point of view. This is partly due to the lack of datasets and algorithms specially developed for the tradition.
-Pitch detection algorithms tend to be biased to western tuning systems, which makes it necessary to test their efficiency when applied to gamelan music. On the other hand, the cultural value of gamelan traditions urge us to review and eventually adapt these algorithms, thus developing the scope of MIR.
+## Description
 
-## Dataset
-The dataset includes recordings from three gamelan ensembles. The first ensemble offers isolated tones from various gamelan instruments along with synthetic arrangements of 10 gamelan pieces using these recordings. Each arrangement includes stems for individual tracks corresponding to each instrument. The second ensemble is not relevant to the project as it focuses on the non-melodic Kendhang instrument. The third ensemble provides one-shot recordings of different gamelan instruments but lacks arrangements, potentially limiting its usefulness for the project.
+Pitch detection algorithms have not been extensively explored for non-eurogenetic musical
+traditions, despite the rich theoretical foundation provided by ethnomusicology. In an effort to
+address this gap, our research takes a practical approach by examining contemporary pitch detec-
+tion methods and applying them to a case study. We propose a pitch detection tool for gamelan
+gong kebyar, a traditional Balinese ensemble. By focusing on this particular case study, we hope
+to provide insights that can be applied to develop tools for other music traditions.
 
-# Roadmap
-1. Separate harmonic from percussive component, this will facilitate the harmonic analysis (very simple librosa) [10-march?]
+## Installation
+
+python version == 3.11.7 
+
+```bash
+pip install -r requirements.txt
+```
+
+### Pipeline
+
+- pipeline.ipynb: This notebook implements a pipeline described in a report. It takes an audio file as input, extracts a gamelan tuning vector, compares it with three different theory-based tuning vectors, and predicts the regency of the gamelan.
+
+### Experiments
+
+- experiments.ipynb: This notebook contains several attempts that haven't produced promising results and have thus not been included in the main pipeline.
+
+### Helpers
+
+- helpers.py: This file contains helpers functions used in the implementation of the main pipeline (e.g. find_stable_regions, find_scale).
+
+### Analysis
+
+- gamelan_tuning_analysis.ipynb: This notebook contains the analysis and visualization of the distribution of the data in the TothSpreasheet. It also extracts the distribution of the pemade instrument, which is the target of the pipeline mentioned above.
+
+
