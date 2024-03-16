@@ -101,6 +101,7 @@ def group_and_average_frequencies(frequencies, threshold=10):
 
 
 def compute_distance(tone_a, tone_b):
+    if tone_a == 0: return 0
     distance_in_cents = 1200 * np.log2(tone_b / tone_a)
     return distance_in_cents
 
@@ -153,8 +154,3 @@ def find_scale(tone_group):
 
     # Return the distances of the scale
     return scale_distances
-
-def gaussian_kernel(x, y, sigma=100):
-    distance_squared = np.sum((x - y) ** 2)
-    kernel_value = np.exp(-distance_squared / (2 * sigma**2))
-    return kernel_value
