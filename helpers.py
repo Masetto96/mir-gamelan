@@ -1,5 +1,6 @@
 import numpy as np
 import librosa
+from rich import print
 
 def detect_pitch(S, sr, fmin, fmax):
     """

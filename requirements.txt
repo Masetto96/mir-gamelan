@@ -6,7 +6,7 @@ audioread==3.0.1
 certifi==2024.2.2
 cffi==1.16.0
 charset-normalizer==3.3.2
-comm==0.2.1
+comm==0.2.2
 contourpy==1.2.0
 crepe==0.0.14
 cycler==0.12.1
@@ -16,7 +16,7 @@ dm-tree==0.1.8
 et-xmlfile==1.1.0
 executing==2.0.1
 flatbuffers==24.3.7
-fonttools==4.49.0
+fonttools==4.50.0
 gast==0.5.4
 google-pasta==0.2.0
 grpcio==1.62.1
@@ -36,7 +36,7 @@ lazy_loader==0.3
 libclang==16.0.6
 librosa==0.10.1
 llvmlite==0.42.0
-Markdown==3.5.2
+Markdown==3.6
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.8.3
